@@ -9,6 +9,8 @@
         <Icon path="icons/pythonTerminal.png" />
         <Description>Shows cool python console.</Description>
     </AddOnInfo>
+    
+    <ToolBar path="plugin/toolbar.xml" />
 
     <Plugin starter="python" path="plugin"/>
 </AddOn>
