@@ -8,10 +8,10 @@ class Terminal:
         self.__app = app
     
     def open(self):
-        import inprocess_qtconsole
-        
         self.__app.actions["open"].enabled = False
         self.__app.actions["open"].triggered.disconnect(self.open)
+        
+        import inprocess_qtconsole
         inprocess_qtconsole.main(i=self.__app)
 
 
