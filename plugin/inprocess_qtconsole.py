@@ -1,6 +1,7 @@
 from __future__ import print_function
 import os
 
+import sys
 from IPython.qt.console.rich_ipython_widget import RichIPythonWidget
 from IPython.qt.inprocess import QtInProcessKernelManager
 from IPython.lib import guisupport
@@ -8,6 +9,11 @@ from IPython.lib import guisupport
 
 def print_process_id():
     print('Process ID is:', os.getpid())
+
+
+class RichIPythonExitingWidget(RichIPythonWidget):
+    def closeEvent(self, event):
+        sys.exit(0)
 
 
 def main(**variables):
@@ -33,7 +39,7 @@ def main(**variables):
         kernel_manager.shutdown_kernel()
         app.exit()
 
-    control = RichIPythonWidget()
+    control = RichIPythonExitingWidget()
     control.kernel_manager = kernel_manager
     control.kernel_client = kernel_client
     control.exit_requested.connect(stop)

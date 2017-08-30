@@ -1,5 +1,3 @@
-from functools import partial
-
 from org.umlfri.api.main_loops.qt import QtMainLoop
 
 

@@ -2,7 +2,7 @@
 <AddOn id="urn:umlfri.org:plugin:ipythonconsole" xmlns="http://umlfri.org/v2/addon.xsd">
     <AddOnInfo>
         <Name name="IPython console"/>
-        <Version version="0.0.1"/>
+        <Version version="0.0.2"/>
         <Author name="Jan Janech"/>
         <Homepage url="http://umlfri.org"/>
         <CommonLicense name="LGPL-3"/>
