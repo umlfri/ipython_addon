@@ -10,7 +10,7 @@
         <Description>Shows cool python console.</Description>
     </AddOnInfo>
     
-    <ToolBar path="plugin/toolbar.xml" />
+    <Injections path="injections" />
 
     <Plugin starter="python" path="plugin"/>
 </AddOn>
